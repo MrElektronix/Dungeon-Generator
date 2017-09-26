@@ -6,8 +6,9 @@ class Grid {
 		this.tileheight = tileheight;
 		this.tileX = 0;
 		this.tileY = 0;
-		this.tileOffset = 40;
+		this.tileOffset = tilewidth;
 		this.tiles = [];
+		this.cellSize = ((this.tilewidth + this.tileheight) / 2);
 	}
 	
 	createGrid() {

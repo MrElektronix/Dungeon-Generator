@@ -11,7 +11,7 @@ draw(context) {
 	context.rect(this.x, this.y, this.width, this.height);
 	context.fillStyle = this.color;
 	context.fill();
-	context.lineWidth = 1;
+	context.lineWidth = 0.5;
 	context.strokeStyle = "black";
 	context.stroke();
 }
