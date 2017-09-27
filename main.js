@@ -46,13 +46,19 @@ let createRoom = ()=> {
 				roomY -= roomHeight;
 			}
 			
+			
+			
 			for (let i = roomY;  i < (roomHeight + roomY); i++) {
 				for (let j = roomX; j < (roomWidth + roomX); j++){
 					grid.tiles[i][j].color = "white";
+					
 				}
 			}
 			i++;
+			storeRoomInfo(roomX, roomY, roomWidth, roomHeight);
 		}
+	
+		getRoomInfo();
 }
 
 
@@ -62,5 +68,20 @@ let RoomSize = ()=>{
 	roomHeight = roomSize;
 }
 
+let storeRoomInfo = (x, y, width, height)=> {
+	Rooms.push(x);
+	Rooms.push(y);
+	Rooms.push(width);
+	Rooms.push(height);
+}
+
+let getRoomInfo = ()=> {
+	for (let i = 0; i < Rooms.length; i+= 4){
+		let x = Rooms[i];
+		let y = Rooms[i + 1];
+		let width = Rooms[i + 2];
+		let height = Rooms[i + 3];
+	}
+}
 
 Init();
